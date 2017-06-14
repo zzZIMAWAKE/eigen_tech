@@ -1,4 +1,4 @@
-##Dependency setup:##
+## Dependency setup:
 
 Run
 ```shell
@@ -10,7 +10,7 @@ Once the requirements have been installed you'll need to run the following to in
 python setup.py
 ```
 
-##Usage:##
+## Usage:
 
 Use the following command to run the code:
 ```shell
