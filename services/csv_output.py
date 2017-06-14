@@ -2,6 +2,7 @@ import csv
 
 
 class CsvOutput:
+    """Formats data in to a CSV output"""
     def __init__(self, sentences, popular_words):
         self.sentences = sentences
         self.popular_words = popular_words

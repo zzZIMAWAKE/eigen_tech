@@ -6,7 +6,6 @@ from services.console_output import ConsoleOutput
 from services.text_file_handler import TextFileHandler
 from services.tokenized_data import TokenizedData
 
-# You need to execute nltk.download() first and download models -> punkt
 filenames = ['doc{}.txt'.format(i) for i in range(1, 7)]
 results_limit = 5
 
@@ -23,6 +22,7 @@ for filename in filenames:
     else:
         raise Exception('Please implement importer for this file type {}'.format(filename))
 
+# Create counts for each word in the documents
 word_counts = {}
 for sentence in tokenized_data.sentences:
     for word, count in sentence.stats.items():
