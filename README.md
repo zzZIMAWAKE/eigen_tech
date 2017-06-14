@@ -23,6 +23,8 @@ pytest
 ````
 
 If you want to increase the number of most commonly occurring words that will be displayed increased the number assigned to the results_limit variable
+If you wish to add custom files, add them to the inputs folder. Should you no longer want to run the existing files you should delete them, it will run through
+ever file within the inputs folder, it will throw an exception if any of the files are not txt files.
 
 ## Documentation
 
