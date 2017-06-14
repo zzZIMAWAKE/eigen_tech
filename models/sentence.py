@@ -3,6 +3,8 @@ import re
 
 
 class Sentence:
+    """Uses our chosen word extractor to extract words from the sentence text,
+    stores stats on word counts for later access"""
     def __init__(self, text, file, word_extractor):
         self.text = text
         self.file = file

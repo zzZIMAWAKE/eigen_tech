@@ -2,6 +2,8 @@ from nltk.tokenize import WhitespaceTokenizer, word_tokenize
 
 
 class WordExtractor:
+    """Method to extract words from the document,
+    this can be interchanged with an alternate method should the need arise"""
     def extract(self, text):
         words = WhitespaceTokenizer().tokenize(text)
         # Catch special cases where we don't tokenize words with apostrophes
