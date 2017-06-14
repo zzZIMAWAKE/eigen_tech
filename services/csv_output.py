@@ -9,7 +9,7 @@ class CsvOutput:
 
     def run(self):
         with open('output.csv', 'w') as csvfile:
-            output_writer = csv.writer(csvfile)
+            output_writer = csv.writer(csvfile, quoting=csv.QUOTE_ALL)
             output_writer.writerow(['Word(#)', 'Documents', 'Sentences containing the word'])
             for word in self.popular_words:
                 files = []
@@ -18,4 +18,6 @@ class CsvOutput:
                     if sentence.contains_word(word[0]):
                         files.append(sentence.file)
                         output_sentences.append(sentence.text)
-                output_writer.writerow([word[0], ' '.join(set(files)), '\015'.join(set(output_sentences))])
+                output_writer.writerow([word[0], ' '.join(set(files)), output_sentences.pop()])
+                for output_sentence in output_sentences:
+                    output_writer.writerow(['', '', output_sentence])

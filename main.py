@@ -1,4 +1,5 @@
 import operator
+import os
 import nltk
 from services.word_extractor import WordExtractor
 from services.csv_output import CsvOutput
@@ -16,8 +17,8 @@ text_file_handler = TextFileHandler()
 tokenized_data = TokenizedData(sentence_tokenizer, word_extractor)
 
 # Tokenize file data
-for filename in filenames:
-    if filename[-4:] == '.txt':
+for filename in os.listdir('inputs'):
+    if filename.endswith('.txt'):
         tokenized_data.add_file(filename, text_file_handler)
     else:
         raise Exception('Please implement importer for this file type {}'.format(filename))

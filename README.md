@@ -22,6 +22,8 @@ Use the following command to run any tests:
 pytest
 ````
 
+If you want to increase the number of most commonly occurring words that will be displayed increased the number assigned to the results_limit variable
+
 ## Documentation
 
 _A brief description of the structure of this project and what I was aiming to achieve._
